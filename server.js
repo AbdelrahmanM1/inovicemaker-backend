@@ -13,7 +13,7 @@ app.use(cors());
 app.use(express.json({ limit: '10mb' }));
 app.use(express.static('public'));
 
-// In-memory storage (replace with database in production)
+// In-memory storage 
 let templates = [
   {
     id: 'template-1',
