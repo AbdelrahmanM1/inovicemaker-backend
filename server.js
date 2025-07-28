@@ -55,17 +55,17 @@ let templates = [
             <tr>
               <td style="padding: 12px; border: 1px solid #d1d5db;">{{description}}</td>
               <td style="padding: 12px; text-align: center; border: 1px solid #d1d5db;">{{quantity}}</td>
-              <td style="padding: 12px; text-align: right; border: 1px solid #d1d5db;">${{rate}}</td>
-              <td style="padding: 12px; text-align: right; border: 1px solid #d1d5db;">${{amount}}</td>
+              <td style="padding: 12px; text-align: right; border: 1px solid #d1d5db;">$` + `{{rate}}</td>
+              <td style="padding: 12px; text-align: right; border: 1px solid #d1d5db;">$` + `{{amount}}</td>
             </tr>
             {{/items}}
           </tbody>
         </table>
         <div style="text-align: right; margin-bottom: 30px;">
           <div style="display: inline-block; text-align: right;">
-            <p style="margin: 5px 0;"><strong>Subtotal: ${{subtotal}}</strong></p>
-            <p style="margin: 5px 0;"><strong>Tax ({{taxRate}}%): ${{tax}}</strong></p>
-            <h3 style="margin: 10px 0; color: #2563eb;">Total: ${{total}}</h3>
+            <p style="margin: 5px 0;"><strong>Subtotal: $` + `{{subtotal}}</strong></p>
+            <p style="margin: 5px 0;"><strong>Tax ({{taxRate}}%): $` + `{{tax}}</strong></p>
+            <h3 style="margin: 10px 0; color: #2563eb;">Total: $` + `{{total}}</h3>
           </div>
         </div>
         <footer style="border-top: 1px solid #e5e7eb; padding-top: 20px; color: #6b7280;">
@@ -118,17 +118,17 @@ let templates = [
               <tr style="border-bottom: 1px solid #e5e7eb;">
                 <td style="padding: 15px;">{{description}}</td>
                 <td style="padding: 15px; text-align: center;">{{quantity}}</td>
-                <td style="padding: 15px; text-align: right;">${{rate}}</td>
-                <td style="padding: 15px; text-align: right;">${{amount}}</td>
+                <td style="padding: 15px; text-align: right;">$` + `{{rate}}</td>
+                <td style="padding: 15px; text-align: right;">$` + `{{amount}}</td>
               </tr>
               {{/items}}
             </tbody>
           </table>
         </div>
         <div style="text-align: right; background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px;">
-          <p style="margin: 5px 0; font-size: 1.1em;">Subtotal: ${{subtotal}}</p>
-          <p style="margin: 5px 0; font-size: 1.1em;">Tax ({{taxRate}}%): ${{tax}}</p>
-          <h2 style="margin: 10px 0; color: #fbbf24; font-size: 1.5em;">Total: ${{total}}</h2>
+          <p style="margin: 5px 0; font-size: 1.1em;">Subtotal: $` + `{{subtotal}}</p>
+          <p style="margin: 5px 0; font-size: 1.1em;">Tax ({{taxRate}}%): $` + `{{tax}}</p>
+          <h2 style="margin: 10px 0; color: #fbbf24; font-size: 1.5em;">Total: $` + `{{total}}</h2>
         </div>
         <footer style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.3);">
           <p style="font-style: italic;">Thank you for choosing our services!</p>
@@ -178,8 +178,8 @@ let templates = [
             <tr style="border-bottom: 1px solid #f5f5f5;">
               <td style="padding: 20px 0;">{{description}}</td>
               <td style="padding: 20px 0; text-align: center;">{{quantity}}</td>
-              <td style="padding: 20px 0; text-align: right;">${{rate}}</td>
-              <td style="padding: 20px 0; text-align: right; font-weight: 500;">${{amount}}</td>
+              <td style="padding: 20px 0; text-align: right;">$` + `{{rate}}</td>
+              <td style="padding: 20px 0; text-align: right; font-weight: 500;">$` + `{{amount}}</td>
             </tr>
             {{/items}}
           </tbody>
@@ -187,15 +187,15 @@ let templates = [
         <div style="margin-left: auto; width: 300px; font-size: 0.9em;">
           <div style="padding: 15px 0; border-bottom: 1px solid #f5f5f5; display: flex; justify-content: space-between;">
             <span>Subtotal</span>
-            <span>${{subtotal}}</span>
+            <span>$` + `{{subtotal}}</span>
           </div>
           <div style="padding: 15px 0; border-bottom: 1px solid #f5f5f5; display: flex; justify-content: space-between;">
             <span>Tax ({{taxRate}}%)</span>
-            <span>${{tax}}</span>
+            <span>$` + `{{tax}}</span>
           </div>
           <div style="padding: 20px 0; display: flex; justify-content: space-between; font-size: 1.2em; font-weight: 600;">
             <span>Total</span>
-            <span>${{total}}</span>
+            <span>$` + `{{total}}</span>
           </div>
         </div>
         <footer style="margin-top: 60px; padding-top: 30px; border-top: 1px solid #eee; font-size: 0.8em; color: #999; text-align: center;">
